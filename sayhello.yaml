@@ -1,0 +1,64 @@
+openapi: 3.0.0
+info:
+    version: 1.0.0
+    title: SayHello
+paths:
+  /hello:
+    get:
+      summary: Simple hello greeting
+      description: Returns a simple hello greeting
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "hello there"
+    post:
+      summary: Personalized hello greeting
+      description: Returns a personalized hello greeting based on the provided message and name
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  example: "hello"
+                name:
+                  type: string
+                  example: "brahim"
+              required:
+                - message
+                - name
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "hello brahim"
+  /hello/{name}:
+    get:
+      summary: Hello greeting with name parameter
+      description: Returns a hello greeting with the specified name
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+          description: The name to include in the greeting
+          example: "john"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "hello john"

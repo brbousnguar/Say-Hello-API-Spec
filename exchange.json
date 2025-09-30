@@ -1,0 +1,11 @@
+{
+  "main": "sayhello.yaml",
+  "name": "SayHello",
+  "classifier": "oas",
+  "organizationId": "df76bfb1-5518-4821-9f42-8e2b9e0318ce",
+  "descriptorVersion": "1.0.0",
+  "groupId": "df76bfb1-5518-4821-9f42-8e2b9e0318ce",
+  "assetId": "sayhello",
+  "version": "1.0.0",
+  "tags": []
+}
